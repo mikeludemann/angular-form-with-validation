@@ -1,0 +1,63 @@
+<div (click)="toggleForm()">
+  <h2>Contact Form</h2>
+</div>
+<div [@openForm]="toggle">
+  <form [formGroup]="contactForm" (ngSubmit)="validationForm()" novalidate>
+    <div>
+      <label for="firstname">First Name</label>
+    </div>
+    <div>
+      <input type="text" id="firstname" placeholder="First Name" formControlName="firstName"/>
+    </div>
+    <div>
+      <label for="lastname">Last Name</label>
+    </div>
+    <div>
+      <input type="text" id="lastname" placeholder="Last Name" formControlName="lastName"/>
+    </div>
+    <div>
+      <label for="username">User Name</label>
+    </div>
+    <div>
+      <input type="text" id="username" placeholder="User Name" formControlName="userName"/>
+    </div>
+    <div formGroupName="address">
+      <div>
+        <h2>Address</h2>
+      </div>
+      <div>
+        <label for="street">Street</label>
+      </div>
+      <div>
+        <input type="text" id="street" placeholder="Street" formControlName="street"/>
+      </div>
+      <div>
+        <label for="streetnumber">Street Number</label>
+      </div>
+      <div>
+        <input type="text" id="streetnumber" placeholder="Street Number" formControlName="streetnumber"/>
+      </div>
+      <div>
+        <label for="city">City</label>
+      </div>
+      <div>
+        <input type="text" id="city" placeholder="City" formControlName="city"/>
+      </div>
+      <div>
+        <label for="postalcode">Postalcode</label>
+      </div>
+      <div>
+        <input type="text" id="postalcode" placeholder="Postalcode" formControlName="postalcode"/>
+      </div>
+      <div>
+        <label for="country">Country</label>
+      </div>
+      <div>
+        <input type="text" id="country" placeholder="Country" formControlName="country"/>
+      </div>
+    </div>
+    <div>
+      <input type="submit" [disabled]="!contactForm.valid"/>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+form > div {
+  width: 250px;
+  margin: auto;
+  text-align: left;
+}
+
+form {
+  border-left: 0.5px solid #ddd;
+}
+
+label,
+input {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+input[type="submit"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  padding: 15px 0px;
+  text-align: center;
+  border: 0.5px solid #ccc;
+  color: #fff;
+  background-color: #00d400;
+}
+
+@media screen and (max-width: 600px){
+  form {
+    border-top: 0.5px solid #ddd;
+    border-left: 0px solid #ddd;
+  }
+}

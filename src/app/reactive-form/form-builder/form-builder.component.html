@@ -1,0 +1,63 @@
+<div (click)="toggleForm()">
+  <h2>Contact Form - Form Builder</h2>
+</div>
+<div [@openForm]="toggle">
+  <form [formGroup]="contactFormWithBuilder" (ngSubmit)="validationForm()" novalidate>
+    <div>
+      <label for="firstnameBuilder">First Name</label>
+    </div>
+    <div>
+      <input type="text" id="firstnameBuilder" placeholder="First Name" formControlName="firstName"/>
+    </div>
+    <div>
+      <label for="lastnameBuilder">Last Name</label>
+    </div>
+    <div>
+      <input type="text" id="lastnameBuilder" placeholder="Last Name" formControlName="lastName"/>
+    </div>
+    <div>
+      <label for="usernameBuilder">User Name</label>
+    </div>
+    <div>
+      <input type="text" id="usernameBuilder" placeholder="User Name" formControlName="userName"/>
+    </div>
+    <div formGroupName="address">
+      <div>
+        <h2>Address</h2>
+      </div>
+      <div>
+        <label for="streetBuilder">Street</label>
+      </div>
+      <div>
+        <input type="text" id="streetBuilder" placeholder="Street" formControlName="street"/>
+      </div>
+      <div>
+        <label for="streetnumberBuilder">Street Number</label>
+      </div>
+      <div>
+        <input type="text" id="streetnumberBuilder" placeholder="Street Number" formControlName="streetnumber"/>
+      </div>
+      <div>
+        <label for="cityBuilder">City</label>
+      </div>
+      <div>
+        <input type="text" id="cityBuilder" placeholder="City" formControlName="city"/>
+      </div>
+      <div>
+        <label for="postalcodeBuilder">Postalcode</label>
+      </div>
+      <div>
+        <input type="text" id="postalcodeBuilder" placeholder="Postalcode" formControlName="postalcode"/>
+      </div>
+      <div>
+        <label for="countryBuilder">Country</label>
+      </div>
+      <div>
+        <input type="text" id="countryBuilder" placeholder="Country" formControlName="country"/>
+      </div>
+    </div>
+    <div>
+      <input type="submit" [disabled]="!contactFormWithBuilder.valid"/>
+    </div>
+  </form>
+</div>

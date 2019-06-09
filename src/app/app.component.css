@@ -1,0 +1,17 @@
+.row {
+  width: 100%;
+}
+
+.half--side--left,
+.half--side--right {
+  width: 50%;
+  float: left;
+}
+
+@media screen and (max-width: 600px){
+  .half--side--left,
+  .half--side--right {
+    width: 100%;
+    float: none;
+  }
+}
